@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        button{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: solid 2px black;
+        }
+        main{
+            text-align: center;
+            padding-top: 200px;
+        }
+        #counter{
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+   <div id="counter">
+       0
+   </div> 
+   <div class="buttons">
+       <button id="inc" onclick="increment()">Increment</button>
+       <button id="res" onclick="reset()">Reset</button>
+       <button id="dec" onclick="decrement()">Decrement</button>
+   </div>
+</main>
+<script>
+    const counter=document.getElementById('counter')
+   
+    let counterValue=0
+    function increment() {
+        counterValue += 1;
+        document.getElementById("counter").innerHTML = counterValue;
+    };
+    function decrement() {
+        counterValue -= 1;
+        document.getElementById("counter").innerHTML = counterValue;
+    };
+    function reset() {
+        counterValue=0
+        document.getElementById("counter").innerHTML = counterValue;
+    };
+
+    </script>
+</body>
+</html>
